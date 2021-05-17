@@ -1,0 +1,12 @@
+[Java]
+oracle 다운
+https://www.oracle.com/kr/java/technologies/javase-jdk11-downloads.html
+eclipse 다운
+https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2021-03/R/eclipse-jee-2021-03-R-win32-x86_64.zip
+
+[Database]
+HeidiSQL 다운
+https://www.heidisql.com/download.php?download=installer
+
+혹시를 대비해서 공유폴더 > 빅데이터혼합C_공유파일 > 4.설치파일 참고
+
