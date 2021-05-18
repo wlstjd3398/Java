@@ -1,7 +1,7 @@
 package sub2;
 /*
  * 날짜 : 2021/05/18
- * 이름 :김철학
+ * 이름 : 김철학
  * 내용 : 자바 for 반복문 실습하기
  */
 public class ForTest {
