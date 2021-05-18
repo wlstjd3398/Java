@@ -17,11 +17,11 @@ public class MultiArrayTest {
 		System.out.println("배열 score의 합 : "+sum);
 		
 		
-		int[] grades = {80, 60, 78, 62, 92};
+		int[] grades = {1, 2, 3, 4, 5};
 		int esum = 0;
 		
 		for(int grade : grades) {
-			sum += grade;
+			esum += grade;
 		}
 		System.out.println("배열 grade의 합 : "+esum);
 		
