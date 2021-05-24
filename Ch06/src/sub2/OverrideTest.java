@@ -18,10 +18,11 @@ public class OverrideTest {
 		c.method3();
 		c.method3(200);
 		
-		//final 실습(final 쓰면 num이 상수가 됨 = 연산불가능상태로 마지막 변수가 됨)
-		//final 변수는 상수, 대문자로 쓰임
-		//final 메서드 : 오버라이드 금지
-		//final 클래스 : 상속금지
+		/*final 실습(final 쓰면 num이 상수가 됨 = 연산불가능상태로 마지막 변수가 됨)
+		*final 변수는 상수, 대문자로 쓰임
+		*final 메서드 : 오버라이드 금지
+		*final 클래스 : 상속금지
+		*/
 		
 		final int NUM = 1;
 		//num += 1;
