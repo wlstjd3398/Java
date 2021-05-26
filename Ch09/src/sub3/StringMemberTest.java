@@ -32,6 +32,8 @@ public class StringMemberTest {
 		System.out.println("str 문자열에서 'Korea'를 'Busan'으로 교체 : "+str.replace("Korea", "Busan"));
 		System.out.println("str 문자열에서 'Hello'를 'Welcome'으로 교체 : "+str.replace("Hello", "Welcome"));
 		
+		
+		
 		// valueOf - 기본타입(int, double, boolean, char..-> stack에 저장되는 애들) 변수를 문자열로 변환
 		int var1 = 1;
 		double var2 = 2.13;
