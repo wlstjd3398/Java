@@ -25,7 +25,7 @@ public class SelectTest {
 			Connection conn = DriverManager.getConnection(host, user, pass);
 			
 			// 3단계 - SQL 실행객체 생성 
-			Statement stmt = conn. createStatement();
+			Statement stmt = conn.createStatement();
 			
 			// 4단계 - SQL 실행(SELECT문은 executeQuery로 실행)
 			String sql = "SELECT * FROM `USER1`;";
