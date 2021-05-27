@@ -1,33 +1,56 @@
 package test4;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 /*
- * 날짜 : 2021/05/20
- * 이름 : 김철학
- * 내용 : 자바 최대공약수 출력하기
+ * 날짜 : 0000/00/00
+ * 이름 : 홍길동
+ * 내용 : 리스트 연습문제
  */
 public class JavaTest07 {
-public static void main(String[] args) {
-	System.out.println("1 과 5의 최대공약수 : "+gcd(1, 5));
-	System.out.println("3 과 6의 최대공약수 : "+gcd(3, 6));
-	System.out.println("12 과 18의 최대공약수 : "+gcd(12, 18));
-	System.out.println("60 과 24의 최대공약수 : "+gcd(60, 24));
-
-}
-
-public static int gcd(int a, int b) {
-
-	int temp = 0;
-	if(a>b) {
-		temp = a;
-	}else {
-		temp = b;
+	
+	public static void main(String[] args) {
+		
+		// 60 ~ 100 사이 임의의 수 10개를 더하므로 결과값이 항상 다름
+		printList(createList());
+		
 	}
 	
-	while(true) {
-		if(a % temp == 0 && b % temp == 0) {
-			break;
-		}
-		temp--;
+	public static void printList(List<Integer> scoreList) {
+		
+		int total = 0;
+		int size = scoreList.size();
+		
+		for(int i=0 ; i<size ; i++) {
+			
+			int score = scoreList.get(i);
+			
+			total += score;
+			
+			System.out.print(score);
+			
+			if(i == size - 1) {
+				System.out.print(" = ");
+			}else {
+				System.out.print(" + ");
+			}			
+		}		
+		System.out.println(total);
 	}
-	return temp;
-}
+	
+	public static List<Integer> createList(){
+		
+		List<Integer> scoreList = new ArrayList<>();
+		Random rand = new Random();
+		
+		for(int i=1 ; i<=10 ; i++) {
+			// 60 ~ 100 사이 임의의 수
+			int num = rand.nextInt(41) + 60;
+			scoreList.add(num);
+		}
+		
+		return scoreList;
+	}
 }

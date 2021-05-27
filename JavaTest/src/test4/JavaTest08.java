@@ -1,24 +1,39 @@
 package test4;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
 /*
- * 날짜 : 2021/05/20
- * 이름 : 김철학
- * 내용 : 자바 팩토리얼 연습문제
- */
-public class JavaTest08 {
+	날짜 : OOOO/OO/OO
+	이름 : 홍길동
+	내용 : 로또 번호 생성기 연습문제
+*/
+public class JavaTest08 {	
 	public static void main(String[] args) {
 		
-		int rs1= factorial(3);
-		int rs2= factorial(4);
-		int rs3= factorial(5);
-	
-		System.out.println("3! = "+rs1);
-		System.out.println("4! = "+rs2);
-		System.out.println("5! = "+rs3);
-	}
-	public static int factorial(int n) {
-		if(n<=1) {
-			return 1;
+		Set<Integer> lottoSet = new HashSet<>();
+		
+		for(;;) {
+			int num = (int) Math.ceil(Math.random()*45);			
+				
+			lottoSet.add(num);
+			
+			if(lottoSet.size() == 6) {
+				break;
+			}
 		}
-		return n * factorial(n-1);
+		
+		// 로또번호 정렬
+		Set<Integer> treeSet = new TreeSet<>(lottoSet);
+		
+		// 로또번호 출력
+		Iterator<Integer> iter = treeSet.iterator();
+		
+		while(iter.hasNext()) {
+			System.out.print(iter.next()+" ");
+		}
+		
 	}
 }

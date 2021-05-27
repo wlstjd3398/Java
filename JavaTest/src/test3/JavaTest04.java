@@ -1,32 +1,12 @@
 package test3;
-/*
- * 날짜 : 2021/05/20
+/* 
+ * 날짜 : 2021/05/27
  * 이름 : 김철학
- * 내용 : 자바 연산자 연습문제
+ * 내용 : 자바 클래스 연습문제
  */
 public class JavaTest04 {
 	public static void main(String[] args) {
 		
-		int x = 4;
-		int y = 2;
-		int z;
-		
-		z= x + y;
-		System.out.println("x + y = "+z);
-		
-		z= x - y;
-		System.out.println("x - y = "+z);
-		
-		z= x * y;
-		System.out.println("x * y = "+z);
-		
-		z= x / y;
-		System.out.println("x / y = "+z);
-		
-		z= (x + y) * (x - y);
-		System.out.println("(x + y) * (x - y) = "+z);
-		
-		z= (x * y) + (x / y);
-		System.out.println("(x * y) + (x / y) = "+z);
 	}
+
 }

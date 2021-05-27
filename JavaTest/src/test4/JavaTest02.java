@@ -1,21 +1,52 @@
 package test4;
-/*
- * 날짜 : 2021/05/20
- * 이름 : 김철학
- * 내용 : 자바 배열에서 최댓값 찾기
- */
-public class JavaTest02 {
 
+import java.util.Scanner;
+
+/*
+ * 날짜 : 0000/00/00
+ * 이름 : 홍길동
+ * 내용 : 예외처리 연습문제
+ */
+
+class NotFoundException extends Exception {
+	public NotFoundException() {
+		super("해당하는 숫자를 찾을 수 없습니다.");
+	}
+
+}
+
+public class JavaTest02 {
+	
 	public static void main(String[] args) {
-		int arr[] = {17, 92, 18, 33, 58, 7 ,26, 42};
-		int maxNum = arr[0];
 		
-		for(int i = 0; i<8; i++){
-			if(maxNum < arr[i]) {
-				maxNum = arr[i];
-			}
+		int[] arr = {2, 4, 6, 8, 10};
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("찾을 숫자 입력 : ");
+		int find = sc.nextInt();
+		
+		try {			
+			searchArray(find, arr);
+			System.out.println("해당하는 숫자 찾음!!!");
+			
+		}catch (NotFoundException e) {
+			System.out.println(e.getMessage());
+			
+		}finally {
+			sc.close();
 		}
-		System.out.println("배열 arr에서 가장 큰 수 : "+maxNum);
+		
+		System.out.println("프로그램 정상 종료...");
 	}
 	
+	public static void searchArray(int find, int[] arr) throws NotFoundException {
+
+		for(int i : arr) {
+			if(i == find) {
+				return;
+			}
+		}
+		throw new NotFoundException();
+	}
 }

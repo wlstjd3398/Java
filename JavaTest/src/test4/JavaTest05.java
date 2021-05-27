@@ -1,35 +1,23 @@
 package test4;
 /*
- * 날짜 : 2021/05/20
- * 이름 : 김철학
- * 내용 : 자바 배열 삽입 정렬하기
- * 
- * 개발과정
- * 참고) https://www.youtube.com/watch?v=OGzPmgsI=pQ
- * 1) 배열의 2번째 원소를 1번째 원소와 비교하여 작으면 1번째 원소와 자리 교환
- * 2) 배열의 3번째 원소를 2번째 원소와 비교하여 작으면 2번째 원소와 자리 교환
- * 그리고 다시 1번째 원소와 비교하여 작으면 1번째 원소와 자리 교환
- * 3) 위와 같은 과정 반복 수행
+ * 날짜 : 0000/00/00
+ * 이름 : 홍길동
+ * 내용 : String, Wrapper 클래스 연습문제
  */
 public class JavaTest05 {
-public static void main(String[] args) {
-	
-	int[] arr= {4, 2, 1, 5, 3};
-	
-	for(int j=1; j<arr.length; j++) {
+	public static void main(String[] args) {
 		
-		int key = arr[j];
-		int i=j-1;
+		String   strCsv = "60,72,82,86,92";
+		String[] scores = strCsv.split(",");
 		
-		while(i>=0 && arr[i] > key) {
-			arr[i+1]=arr[i];
-			i= i-1;
+		int total = 0;
+		
+		for(int i=0 ; i<scores.length ; i++) {
+		
+			total += Integer.parseInt(scores[i]);
+			
 		}
-		arr[i+1] = key;
-	}
-	
-	for(int num : arr) {
-		System.out.print(num+" ");
-	}
-}
+		
+		System.out.println("총점 : "+total);	
+	}	
 }
